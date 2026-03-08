@@ -135,7 +135,10 @@
   </head>
 
   <body class="text-ink">
-    <header class="sticky top-0 z-40 border-b border-ink/10 bg-white/90 backdrop-blur">
+    <header
+      id="site-header"
+      class="sticky top-0 z-40 border-b border-ink/10 bg-white/90 backdrop-blur transition-transform duration-300 ease-out will-change-transform"
+    >
       <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a href="#inicio" class="relative inline-block font-display text-xl font-bold tracking-tight">
           Gorka Fidalgo
@@ -155,10 +158,7 @@
           Valoración gratuita
         </a>
       </nav>
-      <div
-        id="mobile-tabs"
-        class="max-h-20 translate-y-0 opacity-100 overflow-hidden border-t border-ink/10 transition-all duration-300 ease-out will-change-transform md:hidden"
-      >
+      <div class="border-t border-ink/10 md:hidden">
         <div class="mx-auto max-w-6xl overflow-x-auto px-4 py-2">
           <ul class="flex min-w-max items-center gap-2 text-sm font-semibold">
             <li>
@@ -182,7 +182,7 @@
     </header>
 
     <main>
-      <section id="inicio" class="mx-auto grid max-w-6xl gap-10 px-6 pb-14 pt-14 md:grid-cols-[1.08fr_0.92fr] md:pt-20">
+      <section id="inicio" class="mx-auto grid max-w-6xl gap-10 px-6 pb-14 pt-8 md:grid-cols-[1.08fr_0.92fr] md:pt-10">
         <div class="flex flex-col justify-center">
           <p class="fade-up mb-4 inline-block rounded-full bg-mint px-4 py-1 text-xs font-bold uppercase tracking-[0.16em] text-pine">
             Nutrición personalizada 🥗
@@ -519,12 +519,13 @@
     </footer>
     <script>
       (function () {
-        const tabs = document.getElementById("mobile-tabs");
-        if (!tabs) return;
+        const header = document.getElementById("site-header");
+        if (!header) return;
 
         let lastY = window.scrollY;
         let ticking = false;
         const DELTA = 8;
+        const TOP_SAFE = 24;
 
         window.addEventListener(
           "scroll",
@@ -537,15 +538,12 @@
               const diff = y - lastY;
               const isMobile = window.innerWidth < 768;
 
-              if (!isMobile || y < 30) {
-                tabs.classList.remove("-translate-y-full", "opacity-0", "pointer-events-none", "max-h-0");
-                tabs.classList.add("translate-y-0", "opacity-100", "max-h-20");
+              if (!isMobile || y < TOP_SAFE) {
+                header.classList.remove("-translate-y-full");
               } else if (diff > DELTA && y > 120) {
-                tabs.classList.add("-translate-y-full", "opacity-0", "pointer-events-none", "max-h-0");
-                tabs.classList.remove("translate-y-0", "opacity-100", "max-h-20");
+                header.classList.add("-translate-y-full");
               } else if (diff < -DELTA) {
-                tabs.classList.remove("-translate-y-full", "opacity-0", "pointer-events-none", "max-h-0");
-                tabs.classList.add("translate-y-0", "opacity-100", "max-h-20");
+                header.classList.remove("-translate-y-full");
               } else {
                 // No cambiar estado con micro-scrolls.
               }
@@ -556,6 +554,12 @@
           },
           { passive: true }
         );
+
+        window.addEventListener("resize", () => {
+          if (window.innerWidth >= 768) {
+            header.classList.remove("-translate-y-full");
+          }
+        });
       })();
     </script>
   </body>

@@ -149,13 +149,16 @@
           <li><a href="#contacto" class="transition hover:text-pine">Contacto</a></li>
         </ul>
         <a
-          href="mailto:contacto@gorkafidalgo.com?subject=Valoraci%C3%B3n%20inicial%20gratuita"
+          href="mailto:gorkafidalgonutricion@gmail.com?subject=Valoraci%C3%B3n%20inicial%20gratuita"
           class="rounded-full bg-ink px-5 py-2 text-sm font-semibold text-white transition hover:bg-pine"
         >
           Valoración gratuita
         </a>
       </nav>
-      <div class="border-t border-ink/10 md:hidden">
+      <div
+        id="mobile-tabs"
+        class="max-h-20 translate-y-0 opacity-100 overflow-hidden border-t border-ink/10 transition-all duration-300 ease-out will-change-transform md:hidden"
+      >
         <div class="mx-auto max-w-6xl overflow-x-auto px-4 py-2">
           <ul class="flex min-w-max items-center gap-2 text-sm font-semibold">
             <li>
@@ -206,7 +209,7 @@
           </p>
           <div class="fade-up-delay mt-8 flex flex-wrap gap-3">
             <a
-              href="mailto:contacto@gorkafidalgo.com?subject=Valoraci%C3%B3n%20inicial%20gratuita"
+              href="mailto:gorkafidalgonutricion@gmail.com?subject=Valoraci%C3%B3n%20inicial%20gratuita"
               class="rounded-full bg-ink px-6 py-3 text-sm font-semibold text-white transition hover:bg-pine"
             >
               Reserva tu valoración inicial gratuita 📩
@@ -393,7 +396,7 @@
               valoración inicial gratuita y sin compromiso.
             </p>
             <a
-              href="mailto:contacto@gorkafidalgo.com?subject=Solicitud%20de%20valoraci%C3%B3n%20gratuita"
+              href="mailto:gorkafidalgonutricion@gmail.com?subject=Solicitud%20de%20valoraci%C3%B3n%20gratuita"
               class="mt-7 inline-block rounded-full bg-ink px-6 py-3 text-sm font-semibold text-white transition hover:bg-pine"
             >
               Solicita tu valoración gratuita 📬
@@ -445,7 +448,7 @@
           </p>
           <div class="mt-7 flex flex-wrap gap-3">
             <a
-              href="mailto:contacto@gorkafidalgo.com?subject=Agenda%20valoraci%C3%B3n%20gratuita"
+              href="mailto:gorkafidalgonutricion@gmail.com?subject=Agenda%20valoraci%C3%B3n%20gratuita"
               class="rounded-full bg-white px-6 py-3 text-sm font-semibold text-ink transition hover:bg-mint"
             >
               Agenda tu valoración gratuita 🚀
@@ -514,5 +517,46 @@
         © 2026 Gorka Fidalgo Nutrición. Todos los derechos reservados.
       </div>
     </footer>
+    <script>
+      (function () {
+        const tabs = document.getElementById("mobile-tabs");
+        if (!tabs) return;
+
+        let lastY = window.scrollY;
+        let ticking = false;
+        const DELTA = 8;
+
+        window.addEventListener(
+          "scroll",
+          () => {
+            if (ticking) return;
+            ticking = true;
+
+            requestAnimationFrame(() => {
+              const y = window.scrollY;
+              const diff = y - lastY;
+              const isMobile = window.innerWidth < 768;
+
+              if (!isMobile || y < 30) {
+                tabs.classList.remove("-translate-y-full", "opacity-0", "pointer-events-none", "max-h-0");
+                tabs.classList.add("translate-y-0", "opacity-100", "max-h-20");
+              } else if (diff > DELTA && y > 120) {
+                tabs.classList.add("-translate-y-full", "opacity-0", "pointer-events-none", "max-h-0");
+                tabs.classList.remove("translate-y-0", "opacity-100", "max-h-20");
+              } else if (diff < -DELTA) {
+                tabs.classList.remove("-translate-y-full", "opacity-0", "pointer-events-none", "max-h-0");
+                tabs.classList.add("translate-y-0", "opacity-100", "max-h-20");
+              } else {
+                // No cambiar estado con micro-scrolls.
+              }
+
+              lastY = y;
+              ticking = false;
+            });
+          },
+          { passive: true }
+        );
+      })();
+    </script>
   </body>
 </html>

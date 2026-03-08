@@ -155,7 +155,10 @@
           Valoración gratuita
         </a>
       </nav>
-      <div class="border-t border-ink/10 md:hidden">
+      <div
+        id="mobile-tabs"
+        class="max-h-20 translate-y-0 opacity-100 overflow-hidden border-t border-ink/10 transition-all duration-300 ease-out will-change-transform md:hidden"
+      >
         <div class="mx-auto max-w-6xl overflow-x-auto px-4 py-2">
           <ul class="flex min-w-max items-center gap-2 text-sm font-semibold">
             <li>
@@ -514,5 +517,46 @@
         © 2026 Gorka Fidalgo Nutrición. Todos los derechos reservados.
       </div>
     </footer>
+    <script>
+      (function () {
+        const tabs = document.getElementById("mobile-tabs");
+        if (!tabs) return;
+
+        let lastY = window.scrollY;
+        let ticking = false;
+        const DELTA = 8;
+
+        window.addEventListener(
+          "scroll",
+          () => {
+            if (ticking) return;
+            ticking = true;
+
+            requestAnimationFrame(() => {
+              const y = window.scrollY;
+              const diff = y - lastY;
+              const isMobile = window.innerWidth < 768;
+
+              if (!isMobile || y < 30) {
+                tabs.classList.remove("-translate-y-full", "opacity-0", "pointer-events-none", "max-h-0");
+                tabs.classList.add("translate-y-0", "opacity-100", "max-h-20");
+              } else if (diff > DELTA && y > 120) {
+                tabs.classList.add("-translate-y-full", "opacity-0", "pointer-events-none", "max-h-0");
+                tabs.classList.remove("translate-y-0", "opacity-100", "max-h-20");
+              } else if (diff < -DELTA) {
+                tabs.classList.remove("-translate-y-full", "opacity-0", "pointer-events-none", "max-h-0");
+                tabs.classList.add("translate-y-0", "opacity-100", "max-h-20");
+              } else {
+                // No cambiar estado con micro-scrolls.
+              }
+
+              lastY = y;
+              ticking = false;
+            });
+          },
+          { passive: true }
+        );
+      })();
+    </script>
   </body>
 </html>

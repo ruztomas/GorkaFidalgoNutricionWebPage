@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gorka Fidalgo | Nutrición clínica y rendimiento</title>
+    <title>Gorka Fidalgo | Nutrición personalizada, salud y rendimiento</title>
     <meta
       name="description"
-      content="Nutrición personalizada con Gorka Fidalgo: composición corporal, salud digestiva y rendimiento deportivo."
+      content="Acompañamiento nutricional personalizado con Gorka Fidalgo para mejorar salud, composición corporal y rendimiento deportivo desde la educación nutricional."
     />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <meta name="author" content="Gorka Fidalgo" />
@@ -15,27 +15,28 @@
     <meta property="og:locale" content="es_ES" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Gorka Fidalgo Nutrición" />
-    <meta property="og:title" content="Gorka Fidalgo | Nutrición clínica y rendimiento" />
+    <meta property="og:title" content="Gorka Fidalgo | Nutrición personalizada, salud y rendimiento" />
     <meta
       property="og:description"
-      content="Acompañamiento nutricional personalizado para mejorar salud, composición corporal y rendimiento."
+      content="Nutrición para deportistas y población general con enfoque práctico, individual y sostenible."
     />
     <meta property="og:url" content="https://gorkafidalgonutricion.com/" />
     <meta property="og:image" content="https://gorkafidalgonutricion.com/assets/img/gorka_bata.png" />
     <meta property="og:image:alt" content="Gorka Fidalgo en retrato profesional" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Gorka Fidalgo | Nutrición clínica y rendimiento" />
+    <meta name="twitter:title" content="Gorka Fidalgo | Nutrición personalizada, salud y rendimiento" />
     <meta
       name="twitter:description"
-      content="Nutrición personalizada para composición corporal, salud digestiva y rendimiento deportivo."
+      content="Mejora tu salud, composición corporal y rendimiento sin dietas cerradas ni soluciones temporales."
     />
     <meta name="twitter:image" content="https://gorkafidalgonutricion.com/assets/img/gorka_bata.png" />
-    <meta name="theme-color" content="#182323" />
+    <meta name="theme-color" content="#172523" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -44,18 +45,19 @@
         theme: {
           extend: {
             colors: {
-              ink: "#182323",
-              glacier: "#f3f8f8",
-              mint: "#d8ece9",
-              aqua: "#5da79a",
-              moss: "#3f6e66"
+              ink: "#172523",
+              pine: "#234440",
+              mint: "#d9ebe8",
+              sand: "#f5eee4",
+              cloud: "#f7faf9",
+              line: "#d7e1df"
             },
             fontFamily: {
               display: ["Sora", "sans-serif"],
               body: ["Outfit", "sans-serif"]
             },
             boxShadow: {
-              card: "0 24px 50px -30px rgba(24, 35, 35, 0.45)"
+              soft: "0 25px 50px -30px rgba(23, 37, 35, 0.45)"
             }
           }
         }
@@ -66,12 +68,17 @@
         scroll-behavior: smooth;
       }
 
+      section[id],
+      footer[id] {
+        scroll-margin-top: 6rem;
+      }
+
       body {
         font-family: "Outfit", sans-serif;
         background:
-          radial-gradient(circle at 5% 0%, #e3f0ee 0%, transparent 38%),
-          radial-gradient(circle at 95% 15%, #f6e9db 0%, transparent 32%),
-          #f8faf9;
+          radial-gradient(circle at 10% 0%, #e6f0ee 0%, transparent 35%),
+          radial-gradient(circle at 92% 10%, #f6ecde 0%, transparent 30%),
+          #f8fbfa;
       }
 
       .fade-up {
@@ -80,13 +87,19 @@
       }
 
       .fade-up-delay {
-        animation: fadeUp 0.7s ease 0.2s forwards;
+        animation: fadeUp 0.7s ease 0.15s forwards;
         opacity: 0;
+      }
+
+      .mesh {
+        background:
+          linear-gradient(120deg, rgba(35, 68, 64, 0.95), rgba(23, 37, 35, 0.95)),
+          radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.12), transparent 35%);
       }
 
       @keyframes fadeUp {
         from {
-          transform: translateY(14px);
+          transform: translateY(12px);
           opacity: 0;
         }
         to {
@@ -95,6 +108,7 @@
         }
       }
     </style>
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -102,12 +116,12 @@
         "name": "Gorka Fidalgo Nutrición",
         "url": "https://gorkafidalgonutricion.com/",
         "image": "https://gorkafidalgonutricion.com/assets/img/gorka_bata.png",
-        "description": "Servicio de nutrición clínica y deportiva con acompañamiento personalizado online y presencial.",
+        "description": "Servicio de nutrición personalizada para salud, composición corporal y rendimiento deportivo.",
         "email": "contacto@gorkafidalgo.com",
         "areaServed": [
           {
             "@type": "City",
-            "name": "Bilbao"
+            "name": "Madrid"
           },
           {
             "@type": "Country",
@@ -119,102 +133,107 @@
       }
     </script>
   </head>
+
   <body class="text-ink">
-    <header class="sticky top-0 z-30 border-b border-ink/10 bg-white/90 backdrop-blur">
+    <header class="sticky top-0 z-40 border-b border-ink/10 bg-white/90 backdrop-blur">
       <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#inicio" class="font-display text-xl font-bold">Gorka Fidalgo</a>
+        <a href="#inicio" class="relative pr-16 font-display text-xl font-bold tracking-tight">
+          Gorka Fidalgo
+          <span class="absolute -bottom-3 right-0 text-[11px] font-medium tracking-[0.14em] text-ink/45">Nutrición</span>
+        </a>
         <ul class="hidden items-center gap-7 text-sm font-semibold md:flex">
-          <li><a href="#sobre-mi" class="hover:text-aqua transition">Sobre mí</a></li>
-          <li><a href="#servicios" class="hover:text-aqua transition">Servicios</a></li>
-          <li><a href="#metodo" class="hover:text-aqua transition">Método</a></li>
-          <li><a href="#contacto" class="hover:text-aqua transition">Contacto</a></li>
+          <li><a href="#inicio" class="transition hover:text-pine">Inicio</a></li>
+          <li><a href="#sobre-mi" class="transition hover:text-pine">Sobre mí</a></li>
+          <li><a href="#como-trabajo" class="transition hover:text-pine">Cómo trabajo</a></li>
+          <li><a href="#programas" class="transition hover:text-pine">Programas</a></li>
+          <li><a href="#contacto" class="transition hover:text-pine">Contacto</a></li>
         </ul>
         <a
-          href="#contacto"
-          class="rounded-full bg-ink px-5 py-2 text-sm font-semibold text-white transition hover:bg-moss"
+          href="mailto:contacto@gorkafidalgo.com?subject=Valoraci%C3%B3n%20inicial%20gratuita"
+          class="rounded-full bg-ink px-5 py-2 text-sm font-semibold text-white transition hover:bg-pine"
         >
-          Primera consulta
+          Valoración gratuita
         </a>
       </nav>
     </header>
 
-    <main id="inicio">
-      <section class="mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-[1.02fr_0.98fr] md:py-20">
+    <main>
+      <section id="inicio" class="mx-auto grid max-w-6xl gap-10 px-6 pb-14 pt-14 md:grid-cols-[1.08fr_0.92fr] md:pt-20">
         <div class="flex flex-col justify-center">
-          <p class="fade-up mb-4 text-sm font-semibold uppercase tracking-[0.16em] text-moss">
-            Nutrición clínica y deportiva
+          <p class="fade-up mb-4 inline-block rounded-full bg-mint px-4 py-1 text-xs font-bold uppercase tracking-[0.16em] text-pine">
+            Nutrición personalizada 🥗
           </p>
           <h1 class="fade-up font-display text-4xl font-extrabold leading-tight md:text-6xl">
-            Tu alimentación puede ser tu mejor herramienta.
+            Salud, composición corporal y rendimiento con estrategia real
           </h1>
-          <p class="fade-up-delay mt-6 max-w-xl text-lg leading-relaxed text-ink/80">
-            Soy Gorka Fidalgo, nutricionista. Te ayudo a mejorar composición corporal, salud y rendimiento con planes
-            realistas, seguimiento cercano y decisiones basadas en evidencia.
+          <p class="fade-up-delay mt-6 max-w-2xl text-lg leading-relaxed text-ink/80">
+            Soy Gorka Fidalgo, Dietista-Nutricionista colegiado en CODINMA (MAD01694), ex futbolista profesional y especializado
+            en nutrición deportiva. Trabajo con deportistas y población general para mejorar alimentación, salud y rendimiento desde
+            la educación nutricional.
           </p>
           <div class="fade-up-delay mt-8 flex flex-wrap gap-3">
             <a
-              href="#servicios"
-              class="rounded-full bg-ink px-6 py-3 text-sm font-semibold text-white transition hover:bg-moss"
+              href="mailto:contacto@gorkafidalgo.com?subject=Valoraci%C3%B3n%20inicial%20gratuita"
+              class="rounded-full bg-ink px-6 py-3 text-sm font-semibold text-white transition hover:bg-pine"
             >
-              Ver servicios
+              Reserva tu valoración inicial gratuita 📩
             </a>
             <a
-              href="#sobre-mi"
-              class="rounded-full border border-ink/20 px-6 py-3 text-sm font-semibold transition hover:bg-white"
+              href="#como-trabajo"
+              class="rounded-full border border-ink/20 bg-white px-6 py-3 text-sm font-semibold transition hover:border-ink/40"
             >
-              Conocer a Gorka
+              Conoce mi metodología 🧭
             </a>
           </div>
         </div>
+
         <div class="relative">
-          <div class="rounded-[2rem] bg-mint p-3 shadow-card">
+          <div class="overflow-hidden rounded-[2rem] border border-line bg-white p-3 shadow-soft">
             <img
               src="assets/img/gorka_bata.png"
-              alt="Gorka Fidalgo con bata en retrato profesional"
+              alt="Gorka Fidalgo en retrato profesional"
               width="815"
               height="1051"
               fetchpriority="high"
-              class="h-[30rem] w-full rounded-[1.45rem] object-cover object-top"
+              class="h-[32rem] w-full rounded-[1.5rem] object-cover object-top"
             />
-          </div>
-          <img
-            src="assets/img/gorka_tools.png"
-            alt="Gorka realizando evaluación antropométrica"
-            width="936"
-            height="1248"
-            loading="lazy"
-            class="absolute -bottom-7 -left-5 hidden h-52 w-40 rounded-2xl border-4 border-white object-cover shadow-card sm:block"
-          />
-          <div class="absolute -right-2 bottom-5 rounded-2xl bg-white/95 px-4 py-3 shadow-card">
-            <p class="text-xs font-semibold uppercase tracking-[0.12em] text-moss">Atención online y presencial</p>
-            <p class="mt-1 text-sm font-bold">Madrid</p>
           </div>
         </div>
       </section>
 
-      <section id="sobre-mi" class="mx-auto max-w-6xl px-6 py-10 md:py-14">
-        <div class="grid gap-6 md:grid-cols-[1.2fr_1fr]">
-          <article class="rounded-3xl border border-ink/10 bg-white p-8 shadow-card">
-            <p class="text-sm font-semibold uppercase tracking-[0.16em] text-moss">Sobre mí</p>
-            <h2 class="mt-3 font-display text-3xl font-bold md:text-4xl">Ciencia, cercanía y estrategia</h2>
+      <section class="mx-auto max-w-6xl px-6 py-8">
+        <div class="rounded-3xl border border-line bg-white p-8 shadow-soft md:p-10">
+          <h2 class="font-display text-3xl font-bold md:text-4xl">¿Te suena esto? 👀</h2>
+          <div class="mt-6 grid gap-4 md:grid-cols-2">
+            <p class="rounded-2xl bg-cloud p-4 italic">Has probado dietas que solo funcionan a corto plazo.</p>
+            <p class="rounded-2xl bg-cloud p-4 italic">No sabes si estás comiendo bien para rendir o mejorar tu composición corporal.</p>
+            <p class="rounded-2xl bg-cloud p-4 italic">Quieres resultados, pero sin poner en riesgo tu salud.</p>
+            <p class="rounded-2xl bg-cloud p-4 italic">Te gustaría entender qué haces y por qué lo haces.</p>
+          </div>
+          <p class="mt-7 border-l-4 border-pine pl-4 text-lg font-semibold">
+            La mayoría de personas no necesitan más restricciones. Necesitan educación, estrategia y acompañamiento 🤝.
+          </p>
+        </div>
+      </section>
+
+      <section id="sobre-mi" class="mx-auto max-w-6xl px-6 py-8 md:py-10">
+        <div class="grid gap-7 md:grid-cols-[1.1fr_0.9fr]">
+          <article class="rounded-3xl border border-line bg-white p-8 shadow-soft">
+            <p class="text-sm font-semibold uppercase tracking-[0.16em] text-pine">Sobre mí 👋</p>
+            <h2 class="mt-3 font-display text-3xl font-bold md:text-4xl">Mi historia</h2>
             <p class="mt-5 leading-relaxed text-ink/80">
-              Mi objetivo no es que dependas de una dieta, sino que entiendas cómo comer para rendir mejor, sentirte
-              mejor y sostener resultados en el tiempo.
+              Mi vida siempre ha estado ligada al deporte de alto rendimiento. Durante ocho años me formé y competí en la cantera
+              del Real Madrid, participando en torneos internacionales y en competiciones como la Copa del Rey, la Copa de Campeones
+              y la UEFA Youth League en categoría juvenil.
             </p>
-            <div class="mt-7 grid gap-3 sm:grid-cols-3">
-              <div class="rounded-2xl bg-glacier p-4">
-                <p class="text-xs font-semibold uppercase tracking-[0.12em] text-moss">01</p>
-                <p class="mt-2 text-sm font-semibold">Diagnóstico inicial</p>
-              </div>
-              <div class="rounded-2xl bg-glacier p-4">
-                <p class="text-xs font-semibold uppercase tracking-[0.12em] text-moss">02</p>
-                <p class="mt-2 text-sm font-semibold">Plan personalizado</p>
-              </div>
-              <div class="rounded-2xl bg-glacier p-4">
-                <p class="text-xs font-semibold uppercase tracking-[0.12em] text-moss">03</p>
-                <p class="mt-2 text-sm font-semibold">Ajustes semanales</p>
-              </div>
-            </div>
+            <p class="mt-4 leading-relaxed text-ink/80">
+              También viví lesiones que cambiaron el rumbo de mi carrera y me llevaron a replantearlo todo. En ese proceso comprendí
+              la importancia real de la nutrición en la salud y en el rendimiento.
+            </p>
+            <p class="mt-4 leading-relaxed text-ink/80">
+              Decidí formarme profesionalmente como Dietista-Nutricionista y hoy aplico esa experiencia con deportistas y población
+              general, porque mejorar la alimentación no es solo rendimiento: es bienestar y calidad de vida.
+            </p>
           </article>
           <img
             src="assets/img/gorka_consulta.png"
@@ -222,109 +241,243 @@
             width="933"
             height="1185"
             loading="lazy"
-            class="h-full min-h-80 w-full rounded-3xl border border-ink/10 object-cover shadow-card"
+            class="h-full min-h-80 w-full rounded-3xl border border-line object-cover shadow-soft"
           />
         </div>
       </section>
 
-      <section id="servicios" class="mx-auto max-w-6xl px-6 py-10 md:py-14">
-        <div class="mb-8">
-          <p class="text-sm font-semibold uppercase tracking-[0.16em] text-moss">Servicios</p>
-          <h2 class="mt-2 font-display text-3xl font-bold md:text-4xl">Programas de acompañamiento</h2>
+      <section class="mx-auto max-w-6xl px-6 py-8 md:py-10">
+        <div class="mesh rounded-3xl p-8 text-white shadow-soft md:p-10">
+          <h2 class="font-display text-3xl font-bold md:text-4xl">Experiencia y formación al servicio de tu salud 🎓</h2>
+          <p class="mt-4 max-w-3xl text-white/85">
+            Mi enfoque combina formación académica, experiencia real y educación nutricional aplicada para que puedas lograr
+            resultados sólidos tanto si buscas rendir más como si quieres mejorar tu salud y tu composición corporal.
+          </p>
+          <ul class="mt-7 grid gap-3 sm:grid-cols-2">
+            <li class="rounded-2xl border border-white/20 bg-white/5 p-4">Deportistas que buscan optimizar su rendimiento</li>
+            <li class="rounded-2xl border border-white/20 bg-white/5 p-4">Personas que quieren mejorar su composición corporal</li>
+            <li class="rounded-2xl border border-white/20 bg-white/5 p-4">Personas que desean mejorar su salud</li>
+            <li class="rounded-2xl border border-white/20 bg-white/5 p-4">Personas que quieren aprender a comer con autonomía</li>
+          </ul>
         </div>
-        <div class="grid gap-5 md:grid-cols-3">
-          <article class="rounded-3xl border border-ink/10 bg-white p-6 shadow-card">
-            <h3 class="font-display text-2xl font-semibold">Composición corporal</h3>
-            <p class="mt-3 text-sm leading-relaxed text-ink/80">
-              Pérdida de grasa o ganancia de masa muscular con estructura nutricional adaptada a tu ritmo de vida.
-            </p>
+      </section>
+
+      <section class="mx-auto max-w-6xl px-6 py-8 md:py-10">
+        <div class="mb-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.16em] text-pine">Beneficios ✅</p>
+          <h2 class="mt-2 font-display text-3xl font-bold md:text-4xl">¿Qué puedes conseguir trabajando conmigo?</h2>
+        </div>
+        <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <article class="rounded-3xl border border-line bg-white p-6 shadow-soft">
+            <h3 class="font-display text-xl font-semibold">Mejorar tu composición corporal</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink/80">De forma inteligente, sostenible y adaptada a tu contexto.</p>
           </article>
-          <article class="rounded-3xl border border-ink/10 bg-white p-6 shadow-card">
-            <h3 class="font-display text-2xl font-semibold">Nutrición deportiva</h3>
-            <p class="mt-3 text-sm leading-relaxed text-ink/80">
-              Optimización de rendimiento, recuperación y timing nutricional para entrenar con más calidad.
-            </p>
+          <article class="rounded-3xl border border-line bg-white p-6 shadow-soft">
+            <h3 class="font-display text-xl font-semibold">Optimizar tu rendimiento deportivo</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink/80">Con estrategia nutricional útil para entrenar, competir y recuperar mejor.</p>
           </article>
-          <article class="rounded-3xl border border-ink/10 bg-white p-6 shadow-card">
-            <h3 class="font-display text-2xl font-semibold">Educación alimentaria</h3>
+          <article class="rounded-3xl border border-line bg-white p-6 shadow-soft">
+            <h3 class="font-display text-xl font-semibold">Mejorar tu salud metabólica</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink/80">Aplicando decisiones prácticas en el día a día, sin extremos.</p>
+          </article>
+          <article class="rounded-3xl border border-line bg-white p-6 shadow-soft">
+            <h3 class="font-display text-xl font-semibold">Aprender a gestionar tu alimentación</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink/80">Para decidir por ti mismo con criterio y seguridad.</p>
+          </article>
+          <article class="rounded-3xl border border-line bg-white p-6 shadow-soft md:col-span-2 lg:col-span-2">
+            <h3 class="font-display text-xl font-semibold">Dejar de depender de dietas temporales</h3>
             <p class="mt-3 text-sm leading-relaxed text-ink/80">
-              Reorganización de hábitos, compra, cocina y decisiones del día a día sin reglas extremas.
+              El objetivo no es solo cambiar tu físico. Es cambiar tu relación con la alimentación para mantener resultados.
             </p>
           </article>
         </div>
       </section>
 
-      <section id="metodo" class="mx-auto max-w-6xl px-6 py-10 md:py-14">
-        <div class="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-          <div class="rounded-3xl bg-ink p-8 text-white shadow-card">
-            <p class="text-sm font-semibold uppercase tracking-[0.16em] text-mint">Método Gorka</p>
-            <h2 class="mt-2 font-display text-3xl font-bold md:text-4xl">Decisiones simples, resultados medibles</h2>
-            <ul class="mt-6 space-y-4 text-sm text-white/85">
-              <li>Valoración completa de hábitos, entrenamiento y contexto personal.</li>
-              <li>Objetivos cuantificables con pauta práctica y flexible.</li>
-              <li>Seguimiento con ajustes frecuentes para evitar estancamientos.</li>
+      <section id="como-trabajo" class="mx-auto max-w-6xl px-6 py-8 md:py-10">
+        <div class="mb-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.16em] text-pine">Cómo trabajo ⚙️</p>
+          <h2 class="mt-2 font-display text-3xl font-bold md:text-4xl">Un proceso estructurado, individual y progresivo</h2>
+          <p class="mt-4 max-w-3xl text-ink/80">
+            No trabajo con dietas cerradas ni con soluciones rápidas. Trabajo desde la educación nutricional para que entiendas qué
+            haces, por qué lo haces y puedas sostenerlo en el tiempo.
+          </p>
+        </div>
+
+        <div class="grid gap-4 md:grid-cols-2">
+          <article class="rounded-3xl border border-line bg-white p-6 shadow-soft">
+            <p class="text-xs font-semibold uppercase tracking-[0.14em] text-pine">Paso 1</p>
+            <h3 class="mt-2 font-display text-2xl font-semibold">Valoración inicial</h3>
+            <ul class="mt-4 space-y-2 text-sm text-ink/80">
+              <li>Contexto personal.</li>
+              <li>Historial clínico y deportivo.</li>
+              <li>Objetivos y hábitos actuales.</li>
+              <li>Interpretación de analíticas.</li>
+              <li>Antropometría ISAK con informe de composición corporal.</li>
             </ul>
+          </article>
+          <article class="rounded-3xl border border-line bg-white p-6 shadow-soft">
+            <p class="text-xs font-semibold uppercase tracking-[0.14em] text-pine">Paso 2</p>
+            <h3 class="mt-2 font-display text-2xl font-semibold">Estrategia personalizada</h3>
+            <ul class="mt-4 space-y-2 text-sm text-ink/80">
+              <li>Adaptada a tu ritmo de vida.</li>
+              <li>Ajustada a tu nivel de actividad.</li>
+              <li>Diseñada para tu momento vital o deportivo.</li>
+              <li>En función de tu situación metabólica.</li>
+            </ul>
+          </article>
+          <article class="rounded-3xl border border-line bg-white p-6 shadow-soft">
+            <p class="text-xs font-semibold uppercase tracking-[0.14em] text-pine">Paso 3</p>
+            <h3 class="mt-2 font-display text-2xl font-semibold">Seguimiento y ajustes</h3>
+            <ul class="mt-4 space-y-2 text-sm text-ink/80">
+              <li>Sesiones individuales periódicas.</li>
+              <li>Evaluación objetiva de evolución.</li>
+              <li>Ajustes progresivos según respuesta.</li>
+              <li>Material educativo y herramientas prácticas.</li>
+            </ul>
+          </article>
+          <article class="rounded-3xl border border-line bg-white p-6 shadow-soft">
+            <p class="text-xs font-semibold uppercase tracking-[0.14em] text-pine">Paso 4</p>
+            <h3 class="mt-2 font-display text-2xl font-semibold">Educación y autonomía</h3>
+            <p class="mt-4 text-sm text-ink/80">
+              El objetivo final no es que dependas de un plan, sino que desarrolles criterio nutricional para tomar decisiones por ti
+              mismo con seguridad.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="programas" class="mx-auto max-w-6xl px-6 py-8 md:py-10">
+        <div class="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+          <article class="rounded-3xl border border-line bg-white p-8 shadow-soft md:p-10">
+            <p class="text-sm font-semibold uppercase tracking-[0.16em] text-pine">Programas 📈</p>
+            <h2 class="mt-2 font-display text-3xl font-bold md:text-4xl">Acompañamiento personalizado de 1, 3 y 6 meses</h2>
+            <p class="mt-4 text-ink/85">
+              Los programas están diseñados como procesos progresivos de aprendizaje y mejora. La duración, estructura y enfoque se
+              adaptan a tu punto de partida, objetivos y contexto personal.
+            </p>
+            <p class="mt-4 text-ink/85">
+              Si quieres saber qué programa encaja mejor contigo y conocer el precio en función de tu situación, lo vemos en una
+              valoración inicial gratuita y sin compromiso.
+            </p>
             <a
-              href="#contacto"
-              class="mt-8 inline-block rounded-full bg-white px-6 py-3 text-sm font-semibold text-ink transition hover:bg-mint"
+              href="mailto:contacto@gorkafidalgo.com?subject=Solicitud%20de%20valoraci%C3%B3n%20gratuita"
+              class="mt-7 inline-block rounded-full bg-ink px-6 py-3 text-sm font-semibold text-white transition hover:bg-pine"
             >
-              Quiero empezar
+              Solicita tu valoración gratuita 📬
             </a>
-          </div>
+          </article>
+
           <div class="grid grid-cols-2 gap-4">
             <img
               src="assets/img/gorka_tools.png"
-              alt="Evaluación de pliegues antropométricos"
+              alt="Evaluación antropométrica"
               width="936"
               height="1248"
               loading="lazy"
-              class="h-full w-full rounded-2xl border border-ink/10 object-cover shadow-card"
+              class="h-full w-full rounded-2xl border border-line object-cover shadow-soft"
             />
             <img
               src="assets/img/gorka_petao.png"
-              alt="Retrato de transformación física de Gorka"
+              alt="Gorka en etapa deportiva"
               width="869"
               height="1036"
               loading="lazy"
-              class="h-full w-full rounded-2xl border border-ink/10 object-cover shadow-card"
+              class="h-full w-full rounded-2xl border border-line object-cover shadow-soft"
             />
           </div>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-6xl px-6 py-8 md:py-10">
+        <div class="rounded-3xl border border-line bg-white p-8 shadow-soft md:p-10">
+          <p class="text-sm font-semibold uppercase tracking-[0.16em] text-pine">Formación 📚</p>
+          <h2 class="mt-2 font-display text-3xl font-bold md:text-4xl">Formación profesional</h2>
+          <ul class="mt-5 grid gap-3 text-ink/85 md:grid-cols-2">
+            <li>Graduado en Nutrición Humana y Dietética.</li>
+            <li>Colegiado en CODINMA (Colegio de Dietistas-Nutricionistas de Madrid) - Nº MAD01694.</li>
+            <li>Máster Oficial en Nutrición Deportiva (en curso).</li>
+            <li>Técnico Superior en Acondicionamiento Físico.</li>
+            <li>Antropometrista ISAK Nivel 1.</li>
+          </ul>
         </div>
       </section>
     </main>
 
-    <footer id="contacto" class="mt-8 border-t border-ink/10 bg-white">
-      <div class="mx-auto grid max-w-6xl gap-8 px-6 py-12 md:grid-cols-2">
+    <footer id="contacto" class="mt-8 border-t border-ink/10 bg-ink text-white">
+      <div class="mx-auto grid max-w-6xl gap-8 px-6 py-14 md:grid-cols-[1.05fr_0.95fr] md:py-16">
         <div>
-          <p class="text-sm font-semibold uppercase tracking-[0.16em] text-moss">Contacto</p>
-          <h2 class="mt-3 font-display text-4xl font-bold">Reserva tu valoración inicial</h2>
-          <p class="mt-4 max-w-md text-ink/80">
-            Cuéntame tu objetivo y te propongo el servicio más adecuado para empezar con una hoja de ruta clara.
+          <h2 class="mt-4 font-display text-4xl font-bold leading-tight md:text-5xl">Salud, nutrición y rendimiento.</h2>
+          <p class="mt-5 max-w-xl text-white/80">
+            No trabajo para que dependas de mí. Trabajo para que aprendas a tomar decisiones por ti mismo y mantengas resultados.
           </p>
-        </div>
-        <div class="space-y-3 text-sm">
-          <p><strong>Email:</strong> contacto@gorkafidalgo.com</p>
-          <p>
-            <strong>Instagram:</strong>
+          <div class="mt-7 flex flex-wrap gap-3">
+            <a
+              href="mailto:contacto@gorkafidalgo.com?subject=Agenda%20valoraci%C3%B3n%20gratuita"
+              class="rounded-full bg-white px-6 py-3 text-sm font-semibold text-ink transition hover:bg-mint"
+            >
+              Agenda tu valoración gratuita 🚀
+            </a>
             <a
               href="https://www.instagram.com/gorkafidalgonutricion/"
               target="_blank"
               rel="noopener noreferrer"
-              class="underline decoration-ink/30 underline-offset-4 hover:decoration-ink"
+              class="inline-flex items-center gap-2 rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
             >
-              @gorkafidalgonutricion
+              <img
+                src="https://cdn.simpleicons.org/instagram/FFFFFF"
+                alt="Instagram"
+                width="16"
+                height="16"
+                class="h-4 w-4"
+                loading="lazy"
+              />
+              Ver Instagram
             </a>
-          </p>
-          <p><strong>Ciudad:</strong> Madrid (online y presencial)</p>
-          <a
-            href="mailto:contacto@gorkafidalgo.com"
-            class="mt-3 inline-block rounded-full bg-ink px-6 py-3 font-semibold text-white transition hover:bg-moss"
-          >
-            Solicitar información
-          </a>
+          </div>
+        </div>
+
+        <div class="rounded-3xl border border-white/15 bg-white/10 p-6 backdrop-blur">
+          <h3 class="font-display text-2xl font-semibold">Datos de contacto</h3>
+          <div class="mt-5 space-y-3 text-sm">
+            <div class="rounded-2xl border border-white/15 bg-white/5 p-4">
+              <p class="text-white/70">📧 Email</p>
+              <a href="mailto:contacto@gorkafidalgo.com" class="mt-1 inline-block font-semibold text-white hover:text-mint">
+                contacto@gorkafidalgo.com
+              </a>
+            </div>
+            <div class="rounded-2xl border border-white/15 bg-white/5 p-4">
+              <p class="text-white/70">🪪 Colegiado CODINMA</p>
+              <p class="mt-1 font-semibold">MAD01694</p>
+            </div>
+            <div class="rounded-2xl border border-white/15 bg-white/5 p-4">
+              <p class="text-white/70">🧑‍💻 Atención</p>
+              <p class="mt-1 font-semibold">Online y presencial</p>
+            </div>
+            <div class="rounded-2xl border border-white/15 bg-white/5 p-4">
+              <p class="flex items-center gap-2 text-white/70">
+                <img
+                  src="https://cdn.simpleicons.org/instagram/FFFFFF"
+                  alt="Instagram"
+                  width="16"
+                  height="16"
+                  class="h-4 w-4"
+                  loading="lazy"
+                />
+                Instagram
+              </p>
+              <a
+                href="https://www.instagram.com/gorkafidalgonutricion/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-2 block font-semibold text-white hover:text-mint"
+              >
+                @gorkafidalgonutricion
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="border-t border-ink/10 py-4 text-center text-xs text-ink/60">
+      <div class="border-t border-white/10 py-4 text-center text-xs text-white/65">
         © 2026 Gorka Fidalgo Nutrición. Todos los derechos reservados.
       </div>
     </footer>

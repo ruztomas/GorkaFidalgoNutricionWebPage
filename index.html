@@ -77,6 +77,8 @@
 
       body {
         font-family: "Manrope", sans-serif;
+        font-size: 1.250rem;
+        line-height: 1.6;
         background:
           radial-gradient(circle at 12% 0%, rgba(62, 78, 74, 0.08) 0%, transparent 34%),
           radial-gradient(circle at 92% 8%, rgba(111, 96, 77, 0.08) 0%, transparent 28%),
@@ -133,29 +135,27 @@
         border-color: rgba(27, 35, 34, 0.16);
       }
 
-      .instagram-reel-card {
-        overflow: hidden;
-      }
-
-      .instagram-reel-embed {
-        display: flex;
-        justify-content: center;
+      .video-embed {
         width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+      }
+
+      .video-embed-frame {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 9 / 16;
         overflow: hidden;
+        border: 1px solid rgba(27, 35, 34, 0.1);
+        border-radius: 1.75rem;
+        background: #111;
+        box-shadow: 0 20px 45px -34px rgba(18, 24, 23, 0.36);
       }
 
-      .instagram-reel-embed blockquote.instagram-media,
-      .instagram-reel-embed iframe {
-        min-width: 0 !important;
-        max-width: 420px !important;
-        width: 100% !important;
-        margin: 0 auto !important;
-      }
-
-      @media (max-width: 480px) {
-        .instagram-reel-card {
-          padding: 0.75rem;
-        }
+      .video-embed-frame iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
       }
 
       @keyframes fadeUp {
@@ -333,12 +333,17 @@
               Hoy ayudo tanto a deportistas como a población general a mejorar su alimentación, porque no se trata solo de rendir
               mejor, sino de vivir mejor.
             </p>
-            <div class="mx-auto mt-10 max-w-[420px] instagram-reel-embed md:mt-12">
-              <blockquote
-                class="instagram-media"
-                data-instgrm-permalink="https://www.instagram.com/reel/DTyDxxRiK6E/?utm_source=ig_embed&amp;utm_campaign=loading"
-                data-instgrm-version="14"
-              ></blockquote>
+            <div class="video-embed mt-10 md:mt-12">
+              <div class="video-embed-frame">
+                <iframe
+                  src="https://www.youtube.com/embed/-6cS3uII5nU?rel=0&modestbranding=1&playsinline=1"
+                  title="Video de Gorka Fidalgo en YouTube"
+                  loading="lazy"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
             </div>
           </article>
         </div>
@@ -361,14 +366,24 @@
       </section>
 
       <section class="mx-auto max-w-6xl px-6 py-4 md:py-6">
-        <img
-          src="assets/img/gorka_consulta.png"
-          alt="Gorka explicando un plan nutricional en consulta"
-          width="933"
-          height="1185"
-          loading="lazy"
-          class="h-auto w-full rounded-3xl border border-line object-cover shadow-soft"
-        />
+        <div class="grid gap-4 md:grid-cols-2">
+          <img
+            src="assets/img/gorka_consulta.png"
+            alt="Gorka explicando un plan nutricional en consulta"
+            width="933"
+            height="1185"
+            loading="lazy"
+            class="h-full min-h-64 w-full rounded-3xl border border-line object-cover shadow-soft"
+          />
+          <img
+            src="assets/img/gorka_consulta_fran.png"
+            alt="Gorka en consulta con Fran"
+            width="933"
+            height="1185"
+            loading="lazy"
+            class="h-full min-h-64 w-full rounded-3xl border border-line object-cover shadow-soft"
+          />
+        </div>
       </section>
 
       <section class="mx-auto max-w-6xl px-6 py-8 md:py-10">
@@ -616,7 +631,6 @@
         © 2026 Gorka Fidalgo Nutrición. Todos los derechos reservados.
       </div>
     </footer>
-    <script async src="https://www.instagram.com/embed.js"></script>
     <script>
       (function () {
         const header = document.getElementById("site-header");

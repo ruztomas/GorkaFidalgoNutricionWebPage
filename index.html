@@ -99,6 +99,13 @@
           radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.12), transparent 35%);
       }
 
+      .instagram-reel-embed blockquote.instagram-media {
+        min-width: 320px !important;
+        max-width: 420px !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+      }
+
       @keyframes fadeUp {
         from {
           transform: translateY(12px);
@@ -260,50 +267,29 @@
             <p class="text-sm font-semibold uppercase tracking-[0.16em] text-pine">Sobre mí 👋</p>
             <h2 class="mt-3 font-display text-3xl font-bold md:text-4xl">Mi historia</h2>
             <p class="mt-5 leading-relaxed text-ink/80">
-              Mi vida siempre ha estado ligada al deporte de alto rendimiento.
+              Mi vida siempre ha estado ligada al deporte de alto rendimiento, formándome durante ocho años en la cantera del Real
+              Madrid y compitiendo a nivel nacional e internacional.
             </p>
             <p class="mt-4 leading-relaxed text-ink/80">
-              Durante ocho años me formé y competí en la cantera del Real Madrid, participando en torneos internacionales y en
-              competiciones como la Copa del Rey, la Copa de Campeones y la UEFA Youth League en categoría juvenil. También tuve la
-              oportunidad de disputar el Campeonato de España con la Selección Madrileña y de acudir a varias concentraciones con la
-              Selección Española sub-17.
-            </p>
-            <div class="mt-5 rounded-2xl border border-dashed border-line bg-cloud p-4 text-sm text-ink/70">
-              Placeholder fotos: jugando al fútbol (Real Madrid, Selección Madrileña y Selección Española).
-            </div>
-            <p class="mt-4 leading-relaxed text-ink/80">
-              Vivir el deporte desde dentro me permitió entender lo que significa competir al máximo nivel: la exigencia diaria, la
-              presión, la disciplina y la importancia de cuidar el cuerpo como tu principal herramienta de trabajo.
-            </p>
-            <p class="mt-4 leading-relaxed text-ink/80">
-              Pero también conocí la otra cara del deporte: las lesiones que cambian el rumbo de una carrera y te obligan a
-              replantearlo todo. Fue en ese proceso cuando comprendí la importancia real de la nutrición en la salud y en el
+              Las lesiones cambiaron mi camino y me llevaron a entender algo clave: la nutrición marca la diferencia en la salud y el
               rendimiento.
             </p>
-            <div class="mt-5 rounded-2xl border border-dashed border-line bg-cloud p-4 text-sm text-ink/70">
-              Placeholder fotos: operación de rodilla.
-            </div>
             <p class="mt-4 leading-relaxed text-ink/80">
-              Decidí entonces formarme profesionalmente y graduarme en Nutrición Humana y Dietética. Además, soy Técnico Superior en
-              Acondicionamiento Físico y Antropometrista ISAK Nivel 1, lo que me permite comprender el rendimiento y la composición
-              corporal desde una perspectiva completa.
-            </p>
-            <div class="mt-5 rounded-2xl border border-dashed border-line bg-cloud p-4 text-sm text-ink/70">
-              Placeholder fotos: graduación en Nutrición y antropometría (Fran García e Iratxe).
-            </div>
-            <p class="mt-4 leading-relaxed text-ink/80">
-              Actualmente curso un Máster Oficial en Nutrición Deportiva y estoy colegiado en el Colegio Oficial de
-              Dietistas-Nutricionistas de Madrid (CODINMA).
+              Por eso decidí formarme como Dietista-Nutricionista, especializándome en nutrición deportiva.
             </p>
             <p class="mt-4 leading-relaxed text-ink/80">
-              Hoy aplico todo ese conocimiento y experiencia tanto con deportistas como con población general, porque mejorar la
-              alimentación no es solo una cuestión de rendimiento deportivo.
+              Hoy ayudo tanto a deportistas como a población general a mejorar su alimentación, porque no se trata solo de rendir
+              mejor, sino de vivir mejor.
             </p>
-            <p class="mt-4 leading-relaxed text-ink/80">
-              Es una cuestión de salud, bienestar y calidad de vida.
-            </p>
-            <div class="mt-5 rounded-2xl border border-dashed border-line bg-cloud p-4 text-sm text-ink/70">
-              Placeholder vídeo: presentación de Instagram.
+            <div class="mt-6 rounded-[2rem] border border-line bg-cloud p-4 shadow-soft md:p-6">
+              <div class="mx-auto max-w-[420px] instagram-reel-embed">
+                <blockquote
+                  class="instagram-media"
+                  data-instgrm-captioned
+                  data-instgrm-permalink="https://www.instagram.com/reel/DTyDxxRiK6E/?utm_source=ig_embed&amp;utm_campaign=loading"
+                  data-instgrm-version="14"
+                ></blockquote>
+              </div>
             </div>
           </article>
         </div>
@@ -581,6 +567,7 @@
         © 2026 Gorka Fidalgo Nutrición. Todos los derechos reservados.
       </div>
     </footer>
+    <script async src="https://www.instagram.com/embed.js"></script>
     <script>
       (function () {
         const header = document.getElementById("site-header");

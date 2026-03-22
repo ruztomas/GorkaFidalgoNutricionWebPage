@@ -31,14 +31,14 @@
       content="Mejora tu salud, composición corporal y rendimiento sin dietas cerradas ni soluciones temporales."
     />
     <meta name="twitter:image" content="https://gorkafidalgonutricion.com/assets/img/gorka_bata.png" />
-    <meta name="theme-color" content="#172523" />
+    <meta name="theme-color" content="#1b2322" />
     <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
     <link rel="shortcut icon" href="assets/img/favicon.svg" type="image/svg+xml" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&display=swap"
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -47,19 +47,19 @@
         theme: {
           extend: {
             colors: {
-              ink: "#172523",
-              pine: "#234440",
-              mint: "#d9ebe8",
-              sand: "#f5eee4",
-              cloud: "#f7faf9",
-              line: "#d7e1df"
+              ink: "#1b2322",
+              pine: "#2f3f3d",
+              mint: "#d9dfdc",
+              sand: "#ece6de",
+              cloud: "#f3f1ec",
+              line: "#d5d0c7"
             },
             fontFamily: {
-              display: ["Sora", "sans-serif"],
-              body: ["Outfit", "sans-serif"]
+              display: ["Fraunces", "serif"],
+              body: ["Manrope", "sans-serif"]
             },
             boxShadow: {
-              soft: "0 25px 50px -30px rgba(23, 37, 35, 0.45)"
+              soft: "0 20px 45px -34px rgba(18, 24, 23, 0.32)"
             }
           }
         }
@@ -76,11 +76,20 @@
       }
 
       body {
-        font-family: "Outfit", sans-serif;
+        font-family: "Manrope", sans-serif;
         background:
-          radial-gradient(circle at 10% 0%, #e6f0ee 0%, transparent 35%),
-          radial-gradient(circle at 92% 10%, #f6ecde 0%, transparent 30%),
-          #f8fbfa;
+          radial-gradient(circle at 12% 0%, rgba(62, 78, 74, 0.08) 0%, transparent 34%),
+          radial-gradient(circle at 92% 8%, rgba(111, 96, 77, 0.08) 0%, transparent 28%),
+          linear-gradient(180deg, #f6f4ef 0%, #f1eee8 100%);
+      }
+
+      .font-display {
+        letter-spacing: -0.03em;
+      }
+
+      .fade-up,
+      .fade-up-delay {
+        filter: saturate(0.92);
       }
 
       .fade-up {
@@ -95,8 +104,33 @@
 
       .mesh {
         background:
-          linear-gradient(120deg, rgba(35, 68, 64, 0.95), rgba(23, 37, 35, 0.95)),
-          radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.12), transparent 35%);
+          linear-gradient(135deg, rgba(35, 46, 44, 0.98), rgba(24, 31, 30, 0.98)),
+          radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.08), transparent 32%);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .serious-card {
+        background: rgba(255, 255, 255, 0.78);
+        border-color: rgba(27, 35, 34, 0.12);
+        box-shadow: 0 18px 40px -34px rgba(18, 24, 23, 0.34);
+        backdrop-filter: blur(10px);
+      }
+
+      .serious-soft {
+        background: rgba(243, 241, 236, 0.88);
+      }
+
+      .hero-frame {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(247, 244, 238, 0.96));
+      }
+
+      .section-kicker {
+        color: #495a57;
+      }
+
+      .muted-button {
+        background: rgba(255, 255, 255, 0.76);
+        border-color: rgba(27, 35, 34, 0.16);
       }
 
       .instagram-reel-card {
@@ -164,12 +198,12 @@
   <body class="text-ink">
     <header
       id="site-header"
-      class="sticky top-0 z-40 border-b border-ink/10 bg-white/90 backdrop-blur transition-transform duration-300 ease-out will-change-transform"
+      class="sticky top-0 z-40 border-b border-ink/10 bg-[#f6f3ed]/92 shadow-[0_10px_30px_-24px_rgba(18,24,23,0.35)] backdrop-blur transition-transform duration-300 ease-out will-change-transform"
     >
       <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a href="#inicio" class="relative inline-block font-display text-xl font-bold tracking-tight">
           Gorka Fidalgo
-          <span class="absolute -bottom-4 left-1/2 -translate-x-1/2 text-[11px] font-medium tracking-[0.14em] text-ink/45">Nutrición</span>
+          <span class="absolute -bottom-4 left-1/2 -translate-x-1/2 text-[11px] font-medium tracking-[0.18em] text-ink/45">Nutrición</span>
         </a>
         <ul class="hidden items-center gap-7 text-sm font-semibold md:flex">
           <li><a href="#inicio" class="transition hover:text-pine">Inicio</a></li>
@@ -189,19 +223,19 @@
         <div class="mx-auto max-w-6xl overflow-x-auto px-4 py-2">
           <ul class="flex min-w-max items-center gap-2 text-sm font-semibold">
             <li>
-              <a href="#inicio" class="block rounded-full border border-ink/15 bg-white px-4 py-2 text-ink/80">Inicio</a>
+              <a href="#inicio" class="block rounded-full border border-ink/15 bg-white/80 px-4 py-2 text-ink/80">Inicio</a>
             </li>
             <li>
-              <a href="#sobre-mi" class="block rounded-full border border-ink/15 bg-white px-4 py-2 text-ink/80">Sobre mí</a>
+              <a href="#sobre-mi" class="block rounded-full border border-ink/15 bg-white/80 px-4 py-2 text-ink/80">Sobre mí</a>
             </li>
             <li>
-              <a href="#como-trabajo" class="block rounded-full border border-ink/15 bg-white px-4 py-2 text-ink/80">Cómo trabajo</a>
+              <a href="#como-trabajo" class="block rounded-full border border-ink/15 bg-white/80 px-4 py-2 text-ink/80">Cómo trabajo</a>
             </li>
             <li>
-              <a href="#programas" class="block rounded-full border border-ink/15 bg-white px-4 py-2 text-ink/80">Programas</a>
+              <a href="#programas" class="block rounded-full border border-ink/15 bg-white/80 px-4 py-2 text-ink/80">Programas</a>
             </li>
             <li>
-              <a href="#contacto" class="block rounded-full border border-ink/15 bg-white px-4 py-2 text-ink/80">Contacto</a>
+              <a href="#contacto" class="block rounded-full border border-ink/15 bg-white/80 px-4 py-2 text-ink/80">Contacto</a>
             </li>
           </ul>
         </div>
@@ -211,14 +245,14 @@
     <main>
       <section id="inicio" class="mx-auto grid max-w-6xl gap-10 px-6 pb-14 pt-8 md:grid-cols-[1.08fr_0.92fr] md:pt-10">
         <div class="flex flex-col justify-center">
-          <p class="fade-up mb-4 inline-block rounded-full bg-mint px-4 py-1 text-xs font-bold uppercase tracking-[0.16em] text-pine">
+          <p class="fade-up mb-4 inline-block rounded-full border border-ink/10 bg-white/70 px-4 py-1 text-xs font-bold uppercase tracking-[0.18em] text-pine">
             Nutrición personalizada 🥗
           </p>
           <h1 class="fade-up font-display text-4xl font-extrabold leading-tight md:text-6xl">
             Salud, composición corporal y rendimiento deportivo
           </h1>
           <div class="relative mt-6 md:hidden">
-            <div class="overflow-hidden rounded-[2rem] border border-line bg-white p-3 shadow-soft">
+            <div class="hero-frame overflow-hidden rounded-[2rem] border border-line p-3 shadow-soft">
               <img
                 src="assets/img/gorka_bata.png"
                 alt="Gorka Fidalgo en retrato profesional"
@@ -243,7 +277,7 @@
             </a>
             <a
               href="#como-trabajo"
-              class="rounded-full border border-ink/20 bg-white px-6 py-3 text-sm font-semibold transition hover:border-ink/40"
+              class="muted-button rounded-full border px-6 py-3 text-sm font-semibold transition hover:border-ink/40"
             >
               Conoce mi metodología 🧭
             </a>
@@ -251,7 +285,7 @@
         </div>
 
         <div class="relative hidden md:block">
-          <div class="overflow-hidden rounded-[2rem] border border-line bg-white p-3 shadow-soft">
+          <div class="hero-frame overflow-hidden rounded-[2rem] border border-line p-3 shadow-soft">
             <img
               src="assets/img/gorka_bata.png"
               alt="Gorka Fidalgo en retrato profesional"
@@ -265,13 +299,13 @@
       </section>
 
       <section class="mx-auto max-w-6xl px-6 py-8">
-        <div class="rounded-3xl border border-line bg-white p-8 shadow-soft md:p-10">
+        <div class="serious-card rounded-3xl border border-line p-8 shadow-soft md:p-10">
           <h2 class="font-display text-3xl font-bold md:text-4xl">¿Te suena esto? 👀</h2>
           <div class="mt-6 grid gap-4 md:grid-cols-2">
-            <p class="rounded-2xl bg-cloud p-4 italic">Has probado dietas que solo funcionan a corto plazo.</p>
-            <p class="rounded-2xl bg-cloud p-4 italic">No sabes si estás comiendo bien para rendir o mejorar tu composición corporal.</p>
-            <p class="rounded-2xl bg-cloud p-4 italic">Quieres resultados, pero sin poner en riesgo tu salud.</p>
-            <p class="rounded-2xl bg-cloud p-4 italic">Te gustaría entender qué haces y por qué lo haces.</p>
+            <p class="serious-soft rounded-2xl p-4 italic">Has probado dietas que solo funcionan a corto plazo.</p>
+            <p class="serious-soft rounded-2xl p-4 italic">No sabes si estás comiendo bien para rendir o mejorar tu composición corporal.</p>
+            <p class="serious-soft rounded-2xl p-4 italic">Quieres resultados, pero sin poner en riesgo tu salud.</p>
+            <p class="serious-soft rounded-2xl p-4 italic">Te gustaría entender qué haces y por qué lo haces.</p>
           </div>
           <p class="mt-7 border-l-4 border-pine pl-4 text-lg font-semibold">
             La mayoría de personas no necesitan más restricciones. Necesitan educación, estrategia y acompañamiento 🤝
@@ -281,8 +315,8 @@
 
       <section id="sobre-mi" class="mx-auto max-w-6xl px-6 py-8 md:py-10">
         <div>
-          <article class="rounded-3xl border border-line bg-white p-8 shadow-soft">
-            <p class="text-sm font-semibold uppercase tracking-[0.16em] text-pine">Sobre mí 👋</p>
+          <article class="serious-card rounded-3xl border border-line p-8 shadow-soft">
+            <p class="section-kicker text-sm font-semibold uppercase tracking-[0.16em]">Sobre mí 👋</p>
             <h2 class="mt-3 font-display text-3xl font-bold md:text-4xl">Mi historia</h2>
             <p class="mt-5 leading-relaxed text-ink/80">
               Mi vida siempre ha estado ligada al deporte de alto rendimiento, formándome durante ocho años en la cantera del Real

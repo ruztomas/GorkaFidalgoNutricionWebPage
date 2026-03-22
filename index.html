@@ -99,11 +99,29 @@
           radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.12), transparent 35%);
       }
 
-      .instagram-reel-embed blockquote.instagram-media {
-        min-width: 320px !important;
+      .instagram-reel-card {
+        overflow: hidden;
+      }
+
+      .instagram-reel-embed {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .instagram-reel-embed blockquote.instagram-media,
+      .instagram-reel-embed iframe {
+        min-width: 0 !important;
         max-width: 420px !important;
         width: 100% !important;
         margin: 0 auto !important;
+      }
+
+      @media (max-width: 480px) {
+        .instagram-reel-card {
+          padding: 0.75rem;
+        }
       }
 
       @keyframes fadeUp {
@@ -281,15 +299,12 @@
               Hoy ayudo tanto a deportistas como a población general a mejorar su alimentación, porque no se trata solo de rendir
               mejor, sino de vivir mejor.
             </p>
-            <div class="mt-6 rounded-[2rem] border border-line bg-cloud p-4 shadow-soft md:p-6">
-              <div class="mx-auto max-w-[420px] instagram-reel-embed">
-                <blockquote
-                  class="instagram-media"
-                  data-instgrm-captioned
-                  data-instgrm-permalink="https://www.instagram.com/reel/DTyDxxRiK6E/?utm_source=ig_embed&amp;utm_campaign=loading"
-                  data-instgrm-version="14"
-                ></blockquote>
-              </div>
+            <div class="mx-auto mt-10 max-w-[420px] instagram-reel-embed md:mt-12">
+              <blockquote
+                class="instagram-media"
+                data-instgrm-permalink="https://www.instagram.com/reel/DTyDxxRiK6E/?utm_source=ig_embed&amp;utm_campaign=loading"
+                data-instgrm-version="14"
+              ></blockquote>
             </div>
           </article>
         </div>
